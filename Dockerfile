@@ -1,6 +1,6 @@
 FROM alpine:3.13
 
-WORKDIR /root
+WORKDIR /data/wwwroot/webman
 #复制启动文件
 COPY *.sh /root/
 RUN sh install.sh
