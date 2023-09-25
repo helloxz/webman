@@ -36,6 +36,17 @@ cd /data/wwwroot/default
 #初始化webman
 composer create-project workerman/webman .
 
+# 初始化安装组件
+init() {
+	# 安装数据库组件
+	composer require -W illuminate/database illuminate/pagination illuminate/events symfony/var-dumper
+	# 安装redis组件
+	composer require -W illuminate/redis illuminate/events
+}
+
+# 执行初始化组件安装
+init
+
 echo '----------------------------------------------'
 echo 'Install Success.'
 echo '----------------------------------------------'
